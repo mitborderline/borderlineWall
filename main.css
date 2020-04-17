@@ -1,20 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-.room{
-	font-family:"Roboto", sans-serif;
-  font-size: 18px;
-}
-
-.headshot {
-  width: 50%;
+h4 {
+  color: rgb(177, 0, 0);
+  font-size: 4vw;
 }
 
 img {
   width: 100%;
 }
 
-.selected {
-  border: 5px solid yellow;
+object {
+  width: 100%;
+  height: calc(65vh);
+}
+
+.headshot {
+  width: 50%;
+}
+
+.inline-block {
+  width: 50%;
+  position: middle;
+  display: inline-block;
+}
+
+.icon {
+  text-align: center;
+  width: 24px;
+  height: 24px;
+}
+
+.row {
+  text-align: center;
 }
 
 .modal-dialog {
@@ -22,9 +39,13 @@ img {
   left: 2%;
 }
 
-object {
-  width: 100%;
-  height: calc(65vh);
+.room{
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.selected {
+  border: 5px solid yellow;
 }
 
 #room0 {
@@ -46,11 +67,6 @@ object {
   width: 65%;
   background: rgba(255, 255, 255, 0.9);
   font-size: 2vw;
-}
-
-h4 {
-  color: rgb(177, 0, 0);
-  font-size: 4vw;
 }
 
 #subHead {
