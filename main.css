@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.room{
+	font-family:"Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.headshot {
+  width: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+.selected {
+  border: 5px solid yellow;
+}
+
+.modal-dialog {
+  top: 5%;
+  left: 2%;
+}
+
+object {
+  width: 100%;
+  height: calc(65vh);
+}
+
+#room0 {
+  position: relative;
+  max-height: calc(100vh - 100px);
+}
+
+#contacts {
+  position: absolute;
+  top: 5%;
+  left: 4%;
+  width: 5%;
+}
+
+#desc {
+  position: absolute;
+  top: 3%;
+  left: 28%;
+  width: 65%;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 2vw;
+}
+
+h4 {
+  color: rgb(177, 0, 0);
+  font-size: 4vw;
+}
+
+#subHead {
+  font-size: 3vw;
+}
