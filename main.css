@@ -45,7 +45,7 @@ object {
 }
 
 .selected {
-  border: 5px solid yellow;
+  border: 5px solid rgb(38, 161, 237);
 }
 
 #room0 {

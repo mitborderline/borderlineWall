@@ -44,13 +44,16 @@
     }
 
     function addRoom(i) {
-      $("#wall").append('<img src="./rooms/room' + i + '.png" id="room' + i + '" onclick="popIntro(this);">');
+      $("#wall").append('<img src="./rooms/room' + i + '.png" id="room' + i + '" onclick="popIntro(this);" onmouseover="highlight(this)">');
+    }
+
+    function highlight(target) {
+      // show border around room
+      $("img").removeClass("selected");
+      target.classList.add("selected");
     }
 
     function popIntro(target) {
-      // visualize selection
-      $("img").removeClass("selected");
-      target.classList.add("selected");
       // load intro text and popup intro dialog
       $('#intro').html('<object type="text/html" data="./rooms/' + target.id + '.html" ></object>');
       $('#intromodal').modal('show');
