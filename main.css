@@ -44,7 +44,8 @@ object {
   font-size: 18px;
 }
 
-.selected {
+#wall img:hover {
+  cursor: pointer;
   border: 5px solid rgb(38, 161, 237);
 }
 
