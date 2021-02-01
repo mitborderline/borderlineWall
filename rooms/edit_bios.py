@@ -1,10 +1,13 @@
 # script for editing all the bios
+# TODO: rooms 19 and 20 have some undecodable character --> copy the file content over from another room
 num_rooms = 24
 
-old = 'src=\"headshot'
-new = 'src=\"headshots/headshot'
+new = 'src=\"../headshots/headshot'
+old = 'src=\"rooms/headshots/headshots/headshot'
+# old = '"../main.css"'
+# new = '"../../main.css"'
 
-for i in range(1,num_rooms+1):
+for i in range(20,num_rooms+1):
 	filename = "bios/room"+str(i)+".html"
 	bio_file = open(filename)
 
