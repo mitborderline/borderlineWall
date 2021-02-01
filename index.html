@@ -17,6 +17,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <script>
+    // change me to add a new room!
     const maxRoom = 24;
     var arr = [];
 
@@ -45,7 +46,7 @@
 
     function popIntro(target) {
       // load intro text and popup intro dialog
-      $('#intro').html('<object type="text/html" data="./rooms/' + target.id + '.html" ></object>');
+      $('#intro').html('<object type="text/html" data="./rooms/bios/' + target.id + '.html" ></object>');
       $('#intromodal').modal('show');
     }
   </script>
@@ -64,8 +65,7 @@
 
   <p>Tunnels connect many of MIT's buildings, and they can even connect a community in quarantine.
     Inspired by <a href="https://coronamaison.fun" target="_corona">Corona Maison</a>,
-    Tunnel66 is a place to gather and showcase the unique cultures of the MIT and adMIT communities,
-    in lieu of <a href="https://admitted.mit.edu/experience" target="_cpw">CPW</a>.
+    Tunnel66 is a place to gather and showcase the unique cultures of the MIT community.
     Each person adds a room to Tunnel66, forming one connected tunnel below. <b>Click on a room to learn more about the
       artist!</b></p>
 
