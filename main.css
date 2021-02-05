@@ -177,7 +177,7 @@ object {
     font-size: 2vw;
   }
 }
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 600px) {
   #contacts p {
     font-size: x-small
   }
