@@ -50,16 +50,24 @@ i:hover {
 
 .btn {
   width: 100%;
-  background-color:#ff7360;
+  background-color: #25b391;
   color: white;
   margin-bottom: 15px;
 }
 
 .btn:hover {
   width: 100%;
-  background-color: #25b391;
+  background-color: #ff7360;
   transition-duration: 0.3s;
   color: white;
+}
+
+.filterByDorm {
+  background-color: #ff7360 !important;
+}
+
+.filterByDorm:hover {
+  background-color: #25b391 !important;
 }
 
 object {
@@ -147,12 +155,17 @@ iframe {
 
 #subHead {
   font-size: 3vw;
+  color: #25b391;
 }
 
 @media only screen and (min-width: 1400px) {
   .container-fluid {
     width: 1400px;
     margin: auto;
+  }
+
+  #subHead {
+    font-size: 2vw;
   }
 }
 @media only screen and (max-width: 765px) {
