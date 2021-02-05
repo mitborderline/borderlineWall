@@ -1,7 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* #ff7360 and #34d4ae */
+.form-check-label {
+  font-size: 18px !important;
+  color: #ff7360 !important;
+}
+.form-check-input:checked {
+  background-color:#ff7360 !important;
+  border-color: #ff7360 !important;
+}
 
+.form-switch {
+  padding: 16px !important;
+  flex-basis: auto;
+}
+.flex-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+/* .btn-check:checked {
+
+} */
 h4 {
   color: #ff7360;
   font-size: 4vw;

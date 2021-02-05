@@ -11,10 +11,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <link rel='icon' href='circleLogo.png' type='image/x-icon'>
+  <!-- gets new bootstrap stylesheet -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -61,6 +62,11 @@
     function popSubmit() {
       $('#submit').modal('show');
     }
+
+    /* function popFilter() {
+      $('.dorms').modal('show');
+    } */
+
   </script>
 </head>
 
@@ -89,17 +95,62 @@
     </div>
   </div>
 
-  <p>Tunnels connect many of MIT's buildings, and they can even connect a community in quarantine.
-    Inspired by <a href="https://coronamaison.fun" target="_corona">Corona Maison</a>,
-    Tunnel66 is a place to gather and showcase the unique cultures of the MIT community.
-    Each person adds a room to Tunnel66, forming one connected tunnel below. <b>Click on each room to learn more
-      about the
-      artist!</b></p>
-
 
   <!-- dorms toggle -->
-  <!-- <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
-<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br> -->
+  <a type="checkbox" class="btn btn-outline-primary" data-bs-toggle="collapse" href="#dorms" id="btn-check-outlined" role="button" aria-expanded="false" aria-controls="dorms" autocomplete="off">
+Filter by Dorm!</a>
+
+  <div class="flex-container collapse" id="dorms">
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="baker" checked>
+      <label class="form-check-label" for="baker">Baker</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="ec" checked>
+      <label class="form-check-label" for="ec">East Campus</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="macg" checked>
+      <label class="form-check-label" for="macg">MacGregor</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="maseeh" checked>
+      <label class="form-check-label" for="maseeh">Maseeh</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="mccormick" checked>
+      <label class="form-check-label" for="mccormick">McCormick</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="new" checked>
+      <label class="form-check-label" for="new">New</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="vassar" checked>
+      <label class="form-check-label" for="vassar">New Vassar</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="next" checked>
+      <label class="form-check-label" for="next">Next</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="random" checked>
+      <label class="form-check-label" for="random">Random</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="simmons" checked>
+      <label class="form-check-label" for="simmons">Simmons</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="bc" checked>
+      <label class="form-check-label" for="bc">Burton Connor</label>
+    </div>
+    <div class="form-check-inline form-switch">
+      <input class="form-check-input" type="checkbox" id="other" checked>
+      <label class="form-check-label" for="other">Other</label>
+    </div>
+  </div>
+  
 
 </div>
 
@@ -172,5 +223,6 @@
 </div>
 
 
-
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </html>
