@@ -54,6 +54,8 @@
       'random': true,
       'simmons': true,
       'vassar': true,
+      'cp*2020': true,
+      'cp*2021': true
     }
 
     $(document).ready(function () {
@@ -158,7 +160,7 @@
           aria-expanded="false" aria-controls="dorms" autocomplete="off">
           Filter by Dorm!</a>
 
-        <div class="flex-container collapse" id="dorms">
+        <div class="flex-container collapse background" id="dorms">
 
           <div class="row">
             <div class="col-sm-4 ">
@@ -220,6 +222,26 @@
 
           </div>
         </div>
+
+        <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#cpw" id="btn-check-outlined" role="button"
+          aria-expanded="false" aria-controls="cpw" autocomplete="off">
+          Filter by CP*!</a>
+
+        <div class="flex-container collapse background" id="cpw">
+          <div class="row">
+            <div class="col-sm-4 ">
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="cp*2021" checked>
+                <label class="form-check-label" for="cp*2021">CP*2021</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="cp*2020" checked>
+                <label class="form-check-label" for="cp*2020">CP*2020</label>
+              </div>
+            </div>
+          </div> 
+        </div>
+
 
         <!--  <div class="row">
           <div class="col-3">

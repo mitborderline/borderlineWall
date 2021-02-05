@@ -71,6 +71,9 @@ i:hover {
   background-color: #25b391 !important;
 }
 
+.background {
+  background-color:rgba(255, 255, 255, 0.733);
+}
 object {
   width: 100%;
   height: calc(65vh);
