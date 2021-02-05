@@ -89,11 +89,13 @@ object {
   flex-direction: row;
   margin-bottom: 18px;
 }
-iframe {
+
+.youtube {
   flex-grow: 2;
   flex-basis: max-content;
   padding: 0 16px;
 }
+
 .popups {
   flex-basis: min-content;
   flex-grow: 1;
