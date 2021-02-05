@@ -104,6 +104,7 @@ iframe {
 .row {
   text-align: center;
   height: max-content;
+  text-align: left;
 }
 
 .modal-dialog {
