@@ -26,6 +26,36 @@
     const maxRoom = 24;
     var arr = [];
 
+    dorms_to_room_nums = {
+      'baker': [],
+      'bc': [3],
+      'ec': [4,5,6,7,10,12,14],
+      'macg': [11],
+      'maseeh': [20,24],
+      'mccormick': [1,2,15],
+      'new': [8],
+      'next': [19,23],
+      'other': [9,16,17,18,21,22],
+      'random': [],
+      'simmons': [13],
+      'vassar': []
+    }
+
+    dorm_show = {
+      'baker': true,
+      'bc': true,
+      'ec': true,
+      'macg': true,
+      'maseeh': true,
+      'mccormick': true,
+      'new': true,
+      'next': true,
+      'other': true,
+      'random': true,
+      'simmons': true,
+      'vassar': true,
+    }
+
     $(document).ready(function () {
       // generate array
       for (i = 1; i <= maxRoom; i++) {
@@ -67,6 +97,25 @@
     /* function popFilter() {
       $('.dorms').modal('show');
     } */
+
+    function toggleDormShow(toggle) {
+      dorm = toggle.id
+      show = dorm_show[dorm]
+      dorm_class = "." + dorm
+      console.log(dorm_show[dorm])
+
+      // loop through rooms of the dorm
+      dorms_to_room_nums[dorm].forEach(idx => {
+        roomId = "#room" + idx
+        if (show) {
+          $(roomId).hide();
+        } else {
+          $(roomId).show();
+        }
+      });
+
+      dorm_show[dorm] = !show
+    }
 
   </script>
 </head>
@@ -113,62 +162,62 @@
 
           <div class="row">
             <div class="col-sm-4 ">
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="baker" checked>
-              <label class="form-check-label" for="baker">Baker</label>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="baker" checked>
+                <label class="form-check-label" for="baker">Baker</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="ec" checked>
+                <label class="form-check-label" for="ec">East Campus</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="macg" checked>
+                <label class="form-check-label" for="macg">MacGregor</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="maseeh" checked>
+                <label class="form-check-label" for="maseeh">Maseeh</label>
+              </div>
             </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="ec" checked>
-              <label class="form-check-label" for="ec">East Campus</label>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="macg" checked>
-              <label class="form-check-label" for="macg">MacGregor</label>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="maseeh" checked>
-              <label class="form-check-label" for="maseeh">Maseeh</label>
-            </div>
-          </div>
 
-          <div class="col-sm-4">
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="mccormick" checked>
-              <label class="form-check-label" for="mccormick">McCormick</label>
+            <div class="col-sm-4">
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="mccormick" checked>
+                <label class="form-check-label" for="mccormick">McCormick</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="new" checked>
+                <label class="form-check-label" for="new">New</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="vassar" checked>
+                <label class="form-check-label" for="vassar">New Vassar</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="next" checked>
+                <label class="form-check-label" for="next">Next</label>
+              </div>
             </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="new" checked>
-              <label class="form-check-label" for="new">New</label>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="vassar" checked>
-              <label class="form-check-label" for="vassar">New Vassar</label>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="next" checked>
-              <label class="form-check-label" for="next">Next</label>
-            </div>
-          </div>
 
-          <div class="col-sm-4 ">
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="random" checked>
-              <label class="form-check-label" for="random">Random</label>
+            <div class="col-sm-4 ">
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="random" checked>
+                <label class="form-check-label" for="random">Random</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="simmons" checked>
+                <label class="form-check-label" for="simmons">Simmons</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="bc" checked>
+                <label class="form-check-label" for="bc">Burton Connor</label>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="other" checked>
+                <label class="form-check-label" for="other">Other</label>
+              </div>
             </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="simmons" checked>
-              <label class="form-check-label" for="simmons">Simmons</label>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="bc" checked>
-              <label class="form-check-label" for="bc">Burton Connor</label>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input class="form-check-input" type="checkbox" id="other" checked>
-              <label class="form-check-label" for="other">Other</label>
-            </div>
-          </div>
-        
+
           </div>
         </div>
 
