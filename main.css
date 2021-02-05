@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 /* #ff7360 and #34d4ae */
+
+.html, .body {
+  position: static;
+}
 .form-check-label {
   font-size: 18px !important;
   color: #ff7360 !important;
@@ -123,6 +127,22 @@ object {
   font-size: 3vw;
 }
 
+@media only screen and (min-width: 1400px) {
+  .container-fluid {
+    width: 1400px;
+    margin: auto;
+  }
+  #desc {
+    width: 890px;
+    top: 5%;
+    /* left: 35%; */
+  }
+
+  h4 {
+    font-size: 4vw;
+  }
+  
+}
 @media only screen and (max-width: 765px) {
   #contacts p {
     font-size: x-small
