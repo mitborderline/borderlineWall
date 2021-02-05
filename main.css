@@ -168,7 +168,7 @@ object {
 }
 
 #subHead {
-  font-size: 3vw;
+  font-size: min(3vw, 32px);
   color: #25b391;
 }
 
@@ -182,10 +182,14 @@ object {
     font-size: x-small
   }
 
-  /* hide video
+  /* hide video */
   iframe {
     display: none;
-  } */
+  }
+
+  .filterByDorm {
+    display: none;
+  }
 
   .btn {
     font-size:small;
