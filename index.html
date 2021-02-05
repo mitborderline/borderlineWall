@@ -28,14 +28,14 @@
 
     var dorms_to_room_nums = {
       'baker': [],
-      'bc': [3],
+      'site4': [],
       'ec': [4, 7, 10, 12, 14],
       'macg': [],
       'maseeh': [20, 24],
       'mccormick': [1, 2, 15],
-      'new': [8,11],
+      'new': [8, 11],
       'next': [5, 6, 19, 23],
-      'other': [9, 16, 17, 18, 21, 22],
+      'other': [3, 9, 16, 17, 18, 21, 22],
       'random': [],
       'simmons': [13],
       'vassar': []
@@ -43,7 +43,7 @@
 
     var dorm_names = [
       "baker",
-      "bc",
+      "site4",
       "ec",
       "macg",
       "maseeh",
@@ -150,110 +150,117 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="frontPage">
-      <img src="template.png" id="room0">
+  <div class="big-container">
+    <div class="container-fluid">
+      <div class="frontPage">
+        <img src="template.png" id="room0">
 
-      <div id="contacts">
-        <p><a href="http://borderline.mit.edu/" target="bl"><img alt="Borderline" src="circleLogo.png" class="logo"></a>
-        </p>
-        <p><a href="mailto:borderline-team@mit.edu" target="mail"><i class="fa fa-3x fa-envelope-square"></i></a> </p>
-        <p><a href="https://www.instagram.com/mitborderline/" target="ig"><i class="fa fa-3x fa-instagram"></i></a></p>
-        <p><a href="https://www.facebook.com/mitborderline/" target="fb"><i class="fa fa-3x fa-facebook-square"></i></a>
-        </p>
-        <p><a href="https://github.com/mitborderline/tunnel66" target="gh"><i class="fa fa-3x fa-github-square"></i></a>
-        </p>
-      </div>
-
-      <div id="desc">
-        <h4>Tunnel66: <span id="subHead">isolation, together.</span></h4>
-
-        <div class="flexRow">
-          <div class="flexColumn">
-            <div class="popups">
-              <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
-              <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
-            </div>
-            <div class="form-check-inline form-switch">
-              <input onclick="showHideAll()" class="form-check-input" type="checkbox" id="allRooms" checked>
-              <label class="form-check-label" for="random">Show/Hide all Rooms</label>
-            </div>
-          </div>
-          <div class="flexColumn youtube">
-            <iframe width="100%" src="https://www.youtube.com/embed/TdTBWN-yaMo" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- dorms toggle -->
-        <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#dorms" id="btn-check-outlined"
-          role="button" aria-expanded="false" aria-controls="dorms" autocomplete="off">
-          Filter by Dorm!</a>
-
-        <div class="flex-container collapse background" id="dorms">
-
-          <div class="row">
-            <div class="col-sm-4 ">
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="baker" checked>
-                <label class="form-check-label" for="baker">Baker</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="ec" checked>
-                <label class="form-check-label" for="ec">East Campus</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="macg" checked>
-                <label class="form-check-label" for="macg">MacGregor</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="maseeh" checked>
-                <label class="form-check-label" for="maseeh">Maseeh</label>
-              </div>
-            </div>
-
-            <div class="col-sm-4">
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="mccormick" checked>
-                <label class="form-check-label" for="mccormick">McCormick</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="new" checked>
-                <label class="form-check-label" for="new">New</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="vassar" checked>
-                <label class="form-check-label" for="vassar">New Vassar</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="next" checked>
-                <label class="form-check-label" for="next">Next</label>
-              </div>
-            </div>
-
-            <div class="col-sm-4 ">
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="random" checked>
-                <label class="form-check-label" for="random">Random</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="simmons" checked>
-                <label class="form-check-label" for="simmons">Simmons</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="bc" checked>
-                <label class="form-check-label" for="bc">Burton Connor</label>
-              </div>
-              <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="other" checked>
-                <label class="form-check-label" for="other">Other</label>
-              </div>
-            </div>
-
-          </div>
+        <div id="contacts">
+          <p><a href="http://borderline.mit.edu/" target="bl"><img alt="Borderline" src="circleLogo.png"
+                class="logo"></a>
+          </p>
+          <p><a href="mailto:borderline-team@mit.edu" target="mail"><i class="fa fa-3x fa-envelope-square"></i></a> </p>
+          <p><a href="https://www.instagram.com/mitborderline/" target="ig"><i class="fa fa-3x fa-instagram"></i></a>
+          </p>
+          <p><a href="https://www.facebook.com/mitborderline/" target="fb"><i
+                class="fa fa-3x fa-facebook-square"></i></a>
+          </p>
+          <p><a href="https://github.com/mitborderline/tunnel66" target="gh"><i
+                class="fa fa-3x fa-github-square"></i></a>
+          </p>
         </div>
 
-        <!-- <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#cpw" id="btn-check-outlined" role="button"
+        <div id="desc">
+          <h4>Tunnel66: <span id="subHead">isolation, together.</span></h4>
+
+          <div class="flexRow">
+            <div class="flexColumn">
+              <div class="popups">
+                <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
+                <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
+              </div>
+              <div class="form-check-inline form-switch">
+                <input onclick="showHideAll()" class="form-check-input" type="checkbox" id="allRooms" checked>
+                <label class="form-check-label" for="random">Show/Hide all Rooms</label>
+              </div>
+            </div>
+            <div class="flexColumn youtube">
+              <iframe width="100%" src="https://www.youtube.com/embed/TdTBWN-yaMo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+          <!-- dorms toggle -->
+          <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#dorms"
+            id="btn-check-outlined" role="button" aria-expanded="false" aria-controls="dorms" autocomplete="off">
+            Filter by Dorm!</a>
+
+          <div class="flex-container collapse background" id="dorms">
+
+            <div class="row">
+              <div class="col-sm-4 ">
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="baker" checked>
+                  <label class="form-check-label" for="baker">Baker</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="ec" checked>
+                  <label class="form-check-label" for="ec">East Campus</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="macg" checked>
+                  <label class="form-check-label" for="macg">MacGregor</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="maseeh" checked>
+                  <label class="form-check-label" for="maseeh">Maseeh</label>
+                </div>
+              </div>
+
+              <div class="col-sm-4">
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="mccormick"
+                    checked>
+                  <label class="form-check-label" for="mccormick">McCormick</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="new" checked>
+                  <label class="form-check-label" for="new">New</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="vassar" checked>
+                  <label class="form-check-label" for="vassar">New Vassar</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="next" checked>
+                  <label class="form-check-label" for="next">Next</label>
+                </div>
+              </div>
+
+              <div class="col-sm-4 ">
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="random" checked>
+                  <label class="form-check-label" for="random">Random</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="simmons"
+                    checked>
+                  <label class="form-check-label" for="simmons">Simmons</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="site4" checked>
+                  <label class="form-check-label" for="site4">Site 4</label>
+                </div>
+                <div class="form-check-inline form-switch">
+                  <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="other" checked>
+                  <label class="form-check-label" for="other">Other</label>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#cpw" id="btn-check-outlined" role="button"
           aria-expanded="false" aria-controls="cpw" autocomplete="off">
           Filter by CP*!</a>
 
@@ -272,7 +279,7 @@
           </div> 
         </div> -->
 
-        <!--  <div class="row">
+          <!--  <div class="row">
           <div class="col-3">
             <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
             <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
@@ -283,75 +290,77 @@
               allowfullscreen></iframe>
           </div>
         </div> -->
-      </div>
-
-    </div>
-
-    <div id="wall"></div>
-
-    <div class="modal fade" id="intromodal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-            <div id="intro"></div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <!-- About Us -->
-    <div class="modal fade" id="aboutUs">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-            <div id="intro">
-              <p>Tunnels connect many of MIT's buildings, and they can even connect a community in quarantine.
-                Inspired by <a href="https://coronamaison.fun" target="_corona">Corona Maison</a>,
-                Tunnel66 is a place to gather and showcase the unique cultures of the MIT community.
-                Each person adds a room to Tunnel66, forming one connected tunnel below.
-              </p>
-              <div><img style="display:block; margin:auto;" alt="Borderline" src="circleLogo.png" class="logo"></div>
-              <p>Tunnel66 is made with love by <a href="https://arts.mit.edu/artists/the-borderline/#about-the-project"
-                  target="_borderline">MIT
-                  Borderline</a>, the student group responsible for augmented reality murals in the tunnels under
-                Building
-                66. Read more about the project on <a href="http://borderline.mit.edu/projects.html" target="bl66">our
-                  site</a>. Tunnel66 was featured on <a
-                  href="https://www.instagram.com/p/CAJh4qtnA5P/?utm_source=ig_web_button_share_sheet"
-                  target="feat">MIT's
-                  front page</a>, <a
-                  href="http://news.mit.edu/2020/tunnel66-collaborative-art-connect-mit-community-0513"
-                  target="mitn">MIT
-                  News</a>, <a href="https://mitadmissions.org/blogs/entry/tunnel66/" target="admit">MIT Admissions
-                  Blog</a>, and <a href="https://www.instagram.com/p/CAK_sRzgUcZ/?utm_source=ig_web_button_share_sheet"
-                  target="igfeat">MIT's official Instagram</a>!
-              </p>
-              <p>
-                Contact: <a href="mailto:borderline-team@mit.edu?Subject=Tunnel66"
-                  target="_mail">borderline-team@mit.edu</a>
-              </p>
+      </div>
+
+      <div id="wall"></div>
+
+      <div class="modal fade" id="intromodal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+              <div id="intro"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Submit a Room -->
-    <div class="modal fade" id="submit">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
-            <div id="intro">
-              To join Tunnel66, <br>
-              1) Read our <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">FAQ</a> <br>
-              2) Download the <a href="./template.png" target="_template">Blank Room Template</a> <br>
-              3) <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">Submit your Room</a>!
-              <hr>
-              <img src="tunnel66_timelapse.gif" alt="room">
-              <br>
+      <!-- About Us -->
+      <div class="modal fade" id="aboutUs">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+              <div id="intro">
+                <p>Tunnels connect many of MIT's buildings, and they can even connect a community in quarantine.
+                  Inspired by <a href="https://coronamaison.fun" target="_corona">Corona Maison</a>,
+                  Tunnel66 is a place to gather and showcase the unique cultures of the MIT community.
+                  Each person adds a room to Tunnel66, forming one connected tunnel below.
+                </p>
+                <div><img style="display:block; margin:auto;" alt="Borderline" src="circleLogo.png" class="logo"></div>
+                <p>Tunnel66 is made with love by <a
+                    href="https://arts.mit.edu/artists/the-borderline/#about-the-project" target="_borderline">MIT
+                    Borderline</a>, the student group responsible for augmented reality murals in the tunnels under
+                  Building
+                  66. Read more about the project on <a href="http://borderline.mit.edu/projects.html" target="bl66">our
+                    site</a>. Tunnel66 was featured on <a
+                    href="https://www.instagram.com/p/CAJh4qtnA5P/?utm_source=ig_web_button_share_sheet"
+                    target="feat">MIT's
+                    front page</a>, <a
+                    href="http://news.mit.edu/2020/tunnel66-collaborative-art-connect-mit-community-0513"
+                    target="mitn">MIT
+                    News</a>, <a href="https://mitadmissions.org/blogs/entry/tunnel66/" target="admit">MIT Admissions
+                    Blog</a>, and <a
+                    href="https://www.instagram.com/p/CAK_sRzgUcZ/?utm_source=ig_web_button_share_sheet"
+                    target="igfeat">MIT's official Instagram</a>!
+                </p>
+                <p>
+                  Contact: <a href="mailto:borderline-team@mit.edu?Subject=Tunnel66"
+                    target="_mail">borderline-team@mit.edu</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit a Room -->
+      <div class="modal fade" id="submit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+              <div id="intro">
+                To join Tunnel66, <br>
+                1) Read our <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">FAQ</a> <br>
+                2) Download the <a href="./template.png" target="_template">Blank Room Template</a> <br>
+                3) <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">Submit your Room</a>!
+                <hr>
+                <img src="tunnel66_timelapse.gif" alt="room">
+                <br>
+              </div>
             </div>
           </div>
         </div>

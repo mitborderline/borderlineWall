@@ -2,9 +2,17 @@
 
 /* #ff7360 and #34d4ae */
 
-.html, .body {
-  position: static;
+.big-container {
+  text-align: center;
+  width:100%;
 }
+
+.container-fluid {
+  margin: 0 auto 5% auto;
+  max-width: max(70%, 900px);
+  text-align: left;
+}
+
 .form-check-label {
   font-size: 18px !important;
   color: #ff7360 !important;
@@ -165,11 +173,6 @@ object {
 }
 
 @media only screen and (min-width: 1400px) {
-  .container-fluid {
-    width: 1400px;
-    margin: auto;
-  }
-
   #subHead {
     font-size: 2vw;
   }
