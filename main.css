@@ -76,7 +76,25 @@ object {
   position: middle;
   display: inline-block;
 }
-
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 18px;
+}
+iframe {
+  flex-grow: 2;
+  flex-basis: max-content;
+  padding: 0 16px;
+}
+.popups {
+  flex-basis: min-content;
+  flex-grow: 1;
+}
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .icon {
   text-align: center;
   width: 24px;
@@ -85,6 +103,7 @@ object {
 
 .row {
   text-align: center;
+  height: max-content;
 }
 
 .modal-dialog {

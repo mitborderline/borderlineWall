@@ -84,8 +84,77 @@
       
       <div id="desc">
         <h4>Tunnel66: <span id="subHead">isolation, together.</span></h4>
-      
-        <div class="row">
+        
+        <div class="flexRow">
+          <div class="flexColumn">
+            <div class="popups">
+              <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
+              <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
+            </div>
+            
+          </div>
+          <div class="flexColumn">
+            <iframe width="100%" src="https://www.youtube.com/embed/TdTBWN-yaMo" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+           <!-- dorms toggle -->
+      <a type="checkbox" class="btn btn" data-bs-toggle="collapse" href="#dorms" id="btn-check-outlined" role="button" aria-expanded="false" aria-controls="dorms" autocomplete="off">
+        Filter by Dorm!</a>
+        
+          <div class="flex-container collapse" id="dorms">
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="baker" checked>
+              <label class="form-check-label" for="baker">Baker</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="ec" checked>
+              <label class="form-check-label" for="ec">East Campus</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="macg" checked>
+              <label class="form-check-label" for="macg">MacGregor</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="maseeh" checked>
+              <label class="form-check-label" for="maseeh">Maseeh</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="mccormick" checked>
+              <label class="form-check-label" for="mccormick">McCormick</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="new" checked>
+              <label class="form-check-label" for="new">New</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="vassar" checked>
+              <label class="form-check-label" for="vassar">New Vassar</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="next" checked>
+              <label class="form-check-label" for="next">Next</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="random" checked>
+              <label class="form-check-label" for="random">Random</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="simmons" checked>
+              <label class="form-check-label" for="simmons">Simmons</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="bc" checked>
+              <label class="form-check-label" for="bc">Burton Connor</label>
+            </div>
+            <div class="form-check-inline form-switch">
+              <input class="form-check-input" type="checkbox" id="other" checked>
+              <label class="form-check-label" for="other">Other</label>
+            </div>
+          </div>
+          
+       <!--  <div class="row">
           <div class="col-3">
             <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
             <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
@@ -95,66 +164,8 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen></iframe>
           </div>
-        </div>
-    </div>
-   
-    
-    
-      <!-- dorms toggle -->
-      <a type="checkbox" class="btn btn-outline-primary" data-bs-toggle="collapse" href="#dorms" id="btn-check-outlined" role="button" aria-expanded="false" aria-controls="dorms" autocomplete="off">
-    Filter by Dorm!</a>
-    
-      <div class="flex-container collapse" id="dorms">
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="baker" checked>
-          <label class="form-check-label" for="baker">Baker</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="ec" checked>
-          <label class="form-check-label" for="ec">East Campus</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="macg" checked>
-          <label class="form-check-label" for="macg">MacGregor</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="maseeh" checked>
-          <label class="form-check-label" for="maseeh">Maseeh</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="mccormick" checked>
-          <label class="form-check-label" for="mccormick">McCormick</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="new" checked>
-          <label class="form-check-label" for="new">New</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="vassar" checked>
-          <label class="form-check-label" for="vassar">New Vassar</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="next" checked>
-          <label class="form-check-label" for="next">Next</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="random" checked>
-          <label class="form-check-label" for="random">Random</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="simmons" checked>
-          <label class="form-check-label" for="simmons">Simmons</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="bc" checked>
-          <label class="form-check-label" for="bc">Burton Connor</label>
-        </div>
-        <div class="form-check-inline form-switch">
-          <input class="form-check-input" type="checkbox" id="other" checked>
-          <label class="form-check-label" for="other">Other</label>
-        </div>
+        </div> -->
       </div>
-      
     
     </div>
     
