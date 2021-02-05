@@ -1,12 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+/* #ff7360 and #34d4ae */
+
 h4 {
-  color: rgb(177, 0, 0);
+  color: #ff7360;
   font-size: 4vw;
 }
 
 img {
   width: 100%;
+}
+
+i {
+  color: #25b391;
+}
+
+i:hover {
+  color: #ff7360;
+  transition-duration: 0.3s;
+}
+
+.logo, .fa {
+  width: 3em;
+}
+
+.btn {
+  width: 100%;
+  background-color:#ff7360;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.btn:hover {
+  width: 100%;
+  background-color: #25b391;
+  transition-duration: 0.3s;
+  color: white;
 }
 
 object {
@@ -72,4 +101,24 @@ object {
 
 #subHead {
   font-size: 3vw;
+}
+
+@media only screen and (max-width: 765px) {
+  #contacts p {
+    font-size: x-small
+  }
+
+  /* hide video
+  iframe {
+    display: none;
+  } */
+
+  .btn {
+    font-size:small;
+    padding: 5px;
+  }
+
+  #desc {
+    height: 30%;
+  }
 }

@@ -16,6 +16,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script>
     // change me to add a new room!
     const maxRoom = 24;
@@ -49,34 +52,55 @@
       $('#intro').html('<object type="text/html" data="./rooms/bios/' + target.id + '.html" ></object>');
       $('#intromodal').modal('show');
     }
+
+
+    function popAboutUs() {
+      $('#aboutUs').modal('show');
+    }
+
+    function popSubmit() {
+      $('#submit').modal('show');
+    }
   </script>
 </head>
 
 <img src="template.png" id="room0">
 
 <div id="contacts">
-  <p><a href="http://borderline.mit.edu/" target="_bl"><img alt="Borderline" src="circleLogo.png"></a></p>
-  <p><a href="https://www.instagram.com/mitborderline/" target="_ig"><img alt="Instagram" src="https://image.flaticon.com/icons/svg/174/174855.svg"></a></p>
-  <a href="https://www.facebook.com/mitborderline/" target="_fb"><img alt="Facebook" src="https://image.flaticon.com/icons/svg/124/124010.svg"></a>
+  <p><a href="http://borderline.mit.edu/" target="bl"><img alt="Borderline" src="circleLogo.png" class="logo"></a></p>
+  <p><a href="mailto:borderline-team@mit.edu" target="mail"><i class="fa fa-3x fa-envelope-square"></i></a> </p>
+  <p><a href="https://www.instagram.com/mitborderline/" target="ig"><i class="fa fa-3x fa-instagram"></i></a></p>
+  <p><a href="https://www.facebook.com/mitborderline/" target="fb"><i class="fa fa-3x fa-facebook-square"></i></a></p>
+  <p><a href="https://github.com/mitborderline/tunnel66" target="gh"><i class="fa fa-3x fa-github-square"></i></a></p>
 </div>
 
 <div id="desc">
   <h4>Tunnel66: <span id="subHead">isolation, together.</span></h4>
 
+  <div class="row">
+    <div class="col-3">
+      <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
+      <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
+    </div>
+    <div class="col-9">
+      <iframe width="100%" src="https://www.youtube.com/embed/TdTBWN-yaMo" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+
   <p>Tunnels connect many of MIT's buildings, and they can even connect a community in quarantine.
     Inspired by <a href="https://coronamaison.fun" target="_corona">Corona Maison</a>,
     Tunnel66 is a place to gather and showcase the unique cultures of the MIT community.
-    Each person adds a room to Tunnel66, forming one connected tunnel below. <b>Click on a room to learn more about the
+    Each person adds a room to Tunnel66, forming one connected tunnel below. <b>Click on each room to learn more
+      about the
       artist!</b></p>
 
-  <b>To join Tunnel66, read <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">FAQ</a>,
-    download the <a href="./template.png" target="_template">template</a>,
-    and <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">submit</a>.</b>
-  <br>
-  Made with love by <a href="https://arts.mit.edu/artists/the-borderline/#about-the-project" target="_borderline">MIT
-    Borderline</a>, the student group responsible for augmented reality murals in the tunnels under Building 66.
-  <br>
-  Contact: <a href="mailto:borderline-team@mit.edu?Subject=Tunnel66" target="_mail">borderline-team@mit.edu</a>
+
+  <!-- dorms toggle -->
+  <!-- <input type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+<label class="btn btn-outline-primary" for="btn-check-outlined">Single toggle</label><br> -->
+
 </div>
 
 <div id="wall"></div>
@@ -91,5 +115,62 @@
     </div>
   </div>
 </div>
+
+<!-- About Us -->
+<div class="modal fade" id="aboutUs">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div id="intro">
+          <p>Tunnels connect many of MIT's buildings, and they can even connect a community in quarantine.
+            Inspired by <a href="https://coronamaison.fun" target="_corona">Corona Maison</a>,
+            Tunnel66 is a place to gather and showcase the unique cultures of the MIT community.
+            Each person adds a room to Tunnel66, forming one connected tunnel below.
+          </p>
+          <div><img style="display:block; margin:auto;" alt="Borderline" src="circleLogo.png" class="logo"></div>
+          <p>Tunnel66 is made with love by <a href="https://arts.mit.edu/artists/the-borderline/#about-the-project"
+              target="_borderline">MIT
+              Borderline</a>, the student group responsible for augmented reality murals in the tunnels under Building
+            66. Read more about the project on <a href="http://borderline.mit.edu/projects.html" target="bl66">our
+              site</a>. Tunnel66 was featured on <a
+              href="https://www.instagram.com/p/CAJh4qtnA5P/?utm_source=ig_web_button_share_sheet" target="feat">MIT's
+              front page</a>, <a href="http://news.mit.edu/2020/tunnel66-collaborative-art-connect-mit-community-0513"
+              target="mitn">MIT
+              News</a>, <a href="https://mitadmissions.org/blogs/entry/tunnel66/" target="admit">MIT Admissions
+              Blog</a>, and <a href="https://www.instagram.com/p/CAK_sRzgUcZ/?utm_source=ig_web_button_share_sheet"
+              target="igfeat">MIT's official Instagram</a>!
+          </p>
+          <p>
+            Contact: <a href="mailto:borderline-team@mit.edu?Subject=Tunnel66"
+              target="_mail">borderline-team@mit.edu</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Submit a Room -->
+<div class="modal fade" id="submit">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div id="intro">
+          To join Tunnel66, <br>
+          1) Read our <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">FAQ</a> <br>
+          2) Download the <a href="./template.png" target="_template">Blank Room Template</a> <br>
+          3) <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">Submit your Room</a>!
+          <hr>
+          <img src="./template.png" alt="blank room">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </html>
