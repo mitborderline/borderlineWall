@@ -26,22 +26,38 @@
     const maxRoom = 24;
     var arr = [];
 
-    dorms_to_room_nums = {
+    var dorms_to_room_nums = {
       'baker': [],
       'bc': [3],
-      'ec': [4,5,6,7,10,12,14],
+      'ec': [4, 7, 10, 12, 14],
       'macg': [11],
-      'maseeh': [20,24],
-      'mccormick': [1,2,15],
+      'maseeh': [20, 24],
+      'mccormick': [1, 2, 15],
       'new': [8],
-      'next': [19,23],
-      'other': [9,16,17,18,21,22],
+      'next': [5, 6, 19, 23],
+      'other': [9, 16, 17, 18, 21, 22],
       'random': [],
       'simmons': [13],
       'vassar': []
     }
 
-    dorm_show = {
+    var dorm_names = [
+      "baker",
+      "bc",
+      "ec",
+      "macg",
+      "maseeh",
+      "mccormick",
+      "new",
+      "next",
+      "other",
+      "random",
+      "simmons",
+      "vassar"
+    ]
+
+    var dorm_show = {
+      'all': true,
       'baker': true,
       'bc': true,
       'ec': true,
@@ -54,8 +70,8 @@
       'random': true,
       'simmons': true,
       'vassar': true,
-      'cp*2020': true,
-      'cp*2021': true
+      // 'cp*2020': true,
+      // 'cp*2021': true
     }
 
     $(document).ready(function () {
@@ -100,15 +116,13 @@
       $('.dorms').modal('show');
     } */
 
-    function toggleDormShow(toggle) {
-      dorm = toggle.id
-      show = dorm_show[dorm]
-      dorm_class = "." + dorm
-      console.log(dorm_show[dorm])
+    function toggleDormShow(dorm) {
+      show = dorm_show[dorm];
+      dorm_class = "." + dorm;
 
       // loop through rooms of the dorm
       dorms_to_room_nums[dorm].forEach(idx => {
-        roomId = "#room" + idx
+        roomId = "#room" + idx;
         if (show) {
           $(roomId).hide();
         } else {
@@ -117,6 +131,22 @@
       });
 
       dorm_show[dorm] = !show
+    }
+
+    function showHideAll() {
+      show_all = dorm_show['all'];
+
+      dorm_names.forEach(dorm => {
+        console.log(dorm);
+        show_dorm = dorm_show[dorm];
+        if (show_all == show_dorm) {
+          toggleDormShow(dorm);
+          dorm_id = "#" + dorm;
+          $(dorm_id).attr('checked', !show_dorm);
+        }
+      });
+
+      dorm_show['all'] = !show_all;
     }
 
   </script>
@@ -147,7 +177,10 @@
               <div onclick="popAboutUs();" class="btn" role="button">About the Project</div>
               <div onclick="popSubmit();" class="btn" role="button">Add Your Room!</div>
             </div>
-
+            <div class="form-check-inline form-switch">
+              <input onclick="showHideAll()" class="form-check-input" type="checkbox" id="allRooms" checked>
+              <label class="form-check-label" for="random">Show/Hide all Rooms</label>
+            </div>
           </div>
           <div class="flexColumn youtube">
             <iframe width="100%" src="https://www.youtube.com/embed/TdTBWN-yaMo" frameborder="0"
@@ -156,8 +189,8 @@
           </div>
         </div>
         <!-- dorms toggle -->
-        <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#dorms" id="btn-check-outlined" role="button"
-          aria-expanded="false" aria-controls="dorms" autocomplete="off">
+        <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#dorms" id="btn-check-outlined"
+          role="button" aria-expanded="false" aria-controls="dorms" autocomplete="off">
           Filter by Dorm!</a>
 
         <div class="flex-container collapse background" id="dorms">
@@ -165,57 +198,57 @@
           <div class="row">
             <div class="col-sm-4 ">
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="baker" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="baker" checked>
                 <label class="form-check-label" for="baker">Baker</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="ec" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="ec" checked>
                 <label class="form-check-label" for="ec">East Campus</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="macg" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="macg" checked>
                 <label class="form-check-label" for="macg">MacGregor</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="maseeh" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="maseeh" checked>
                 <label class="form-check-label" for="maseeh">Maseeh</label>
               </div>
             </div>
 
             <div class="col-sm-4">
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="mccormick" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="mccormick" checked>
                 <label class="form-check-label" for="mccormick">McCormick</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="new" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="new" checked>
                 <label class="form-check-label" for="new">New</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="vassar" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="vassar" checked>
                 <label class="form-check-label" for="vassar">New Vassar</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="next" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="next" checked>
                 <label class="form-check-label" for="next">Next</label>
               </div>
             </div>
 
             <div class="col-sm-4 ">
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="random" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="random" checked>
                 <label class="form-check-label" for="random">Random</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="simmons" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="simmons" checked>
                 <label class="form-check-label" for="simmons">Simmons</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="bc" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="bc" checked>
                 <label class="form-check-label" for="bc">Burton Connor</label>
               </div>
               <div class="form-check-inline form-switch">
-                <input onclick="toggleDormShow(this)" class="form-check-input" type="checkbox" id="other" checked>
+                <input onclick="toggleDormShow(this.id)" class="form-check-input" type="checkbox" id="other" checked>
                 <label class="form-check-label" for="other">Other</label>
               </div>
             </div>
@@ -223,7 +256,7 @@
           </div>
         </div>
 
-        <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#cpw" id="btn-check-outlined" role="button"
+        <!-- <a type="checkbox" class="filterByDorm btn btn" data-bs-toggle="collapse" href="#cpw" id="btn-check-outlined" role="button"
           aria-expanded="false" aria-controls="cpw" autocomplete="off">
           Filter by CP*!</a>
 
@@ -240,8 +273,7 @@
               </div>
             </div>
           </div> 
-        </div>
-
+        </div> -->
 
         <!--  <div class="row">
           <div class="col-3">
@@ -321,7 +353,7 @@
               2) Download the <a href="./template.png" target="_template">Blank Room Template</a> <br>
               3) <a href="https://forms.gle/aPD3rkG2edknmu589" target="_submit">Submit your Room</a>!
               <hr>
-              <img src="./template.png" alt="blank room">
+              <img src="tunnel66_timelapse.gif" alt="room">
               <br>
             </div>
           </div>
