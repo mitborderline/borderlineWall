@@ -10,7 +10,7 @@
 
 3) increase `maxRoom` by 1 in `index.html` 
   
-4) `git pull` in Borderline AFS locker ('cd /mit/borderline/site')
+4) `git pull` in Borderline AFS locker (`cd /mit/borderline/site`)
 
 ## Press Links:
 - [MIT News Article](https://news.mit.edu/2020/tunnel66-collaborative-art-connect-mit-community-0513)
