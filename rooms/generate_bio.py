@@ -1,20 +1,20 @@
 # script for generating a roomX.html popup bio
 
 ###### EDIT THESE PARAMETERS
-room_num = 30
+room_num = 25
 # name = "Gloria Lin"
-description = "about me!"
+description = "Hi! I'm Mindren, a '22 from Chicago doubling in 6-3 and 20. I'm living in Next this semester but lived in MacGregor my first two years here. My MacG single isn't nearly this large, but this is otherwise what my room looks like (featuring my exceptional window view of Simmons, the very conspicuous tennis bubble, and the infamous wind tunnel). Outside of classes, I'm involved with DDR@MIT, Bridge Club, Men's Ultimate, and Camp Kesem -- you might even spot some relevant paraphernalia in my room ;)  "
 headshot = True
 # Username Only for socials
-instagram = "igloramus"
-facebook = "hehehe"
+instagram = "nerd.nim"
+facebook = "nerdnim"
 ############################
 
 filename = './bios/room' + str(room_num) + '.html'
 bio_file = open(filename, "x")
 
-head = "<head>\n\t<link rel=\"stylesheet\" href=\"../main.css\">\n</head><div class=\"room\">"
-headshot_str = "<img class=\"headshot\" src=\"headshots/headshot1.jpg\" alt=\"headshot\" align=\"right\">" if headshot else ""
+head = "<head>\n\t<link rel=\"stylesheet\" href=\"../../main.css\">\n</head><div class=\"room\"> \n"
+headshot_str = "<img class=\"headshot\" src=\"../headshots/headshot" + str(room_num)+ ".jpg\" alt=\"headshot\" align=\"right\">" if headshot else ""
 description_str = "\n <p>" + description + "</p>\n</div> \n"
 social_media = ""
 if len(instagram) > 0 or len(facebook) > 0:
