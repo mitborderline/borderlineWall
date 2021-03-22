@@ -1,13 +1,13 @@
 # script for generating a roomX.html popup bio
 
 ###### EDIT THESE PARAMETERS
-room_num = 25
+room_num = 26
 # name = "Gloria Lin"
-description = "Hi! I'm Mindren, a '22 from Chicago doubling in 6-3 and 20. I'm living in Next this semester but lived in MacGregor my first two years here. My MacG single isn't nearly this large, but this is otherwise what my room looks like (featuring my exceptional window view of Simmons, the very conspicuous tennis bubble, and the infamous wind tunnel). Outside of classes, I'm involved with DDR@MIT, Bridge Club, Men's Ultimate, and Camp Kesem -- you might even spot some relevant paraphernalia in my room ;)  "
+description = "I'm Philena Liu, a current frosh ('24) living in MacGregor G Entry! I'm thinking of majoring in 18C (or maybe 18 or 6), and I'm involved in Borderline (as the co-pub chair woohoo <33) and HMMT. I bought a bunch of tapestry and pillows online (shown in the drawing), and I have super bad posture so I STRUGGLED to move the shelves around so that I could place my monitor higher up. Let's hope my neck doesn't hurt this semester *crosses fingers*. More about me: I like to play badminton (top right shelf!), draw, do css and struggle with css, whistle, watch kdramas/anime/webtoons, and listen to kpop in my free time ;))"
 headshot = True
 # Username Only for socials
-instagram = "nerd.nim"
-facebook = "nerdnim"
+instagram = "liup1134"
+facebook = "philenaliu"
 ############################
 
 filename = './bios/room' + str(room_num) + '.html'
