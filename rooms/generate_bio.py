@@ -1,13 +1,13 @@
 # script for generating a roomX.html popup bio
 
 ###### EDIT THESE PARAMETERS
-room_num = 27
+room_num = 16
 
 # name = "Gloria Lin"
-description = "Hi I’m Yijun! I’m a 2024, prospective Course 10 (ChemE), Borderline Animation Co-Chair, and DAAMIT Publicity Chair. I love figure drawing, sketchbooks, STICKERS, and art in general! If you’re a 2025, I look forward to meeting you soon, and if you’re a current student, I’ll see you around!"
-headshot = True
+description = "Hello everyone! I'm Jessica Pan, a 2024 in Computer Science and Molecular Biology (6-7) with a minor in 4b (Art and Design). I'm originally from Chicago, but I'm currently living in McCormick 3E and am excited to meet everyone! I'm also a part of ESP (the educational studies program, which runs Spark, Splash, and other events you might have heard of!), Lean on Me, and a couple of other clubs. I look forward to meeting you all, in whatever form that takes :D "
+headshot = False
 # Username Only for socials
-instagram = "y.yang.art"
+instagram = ""
 facebook = ""
 ############################
 
