@@ -1,14 +1,14 @@
 # script for generating a roomX.html popup bio
 
 ###### EDIT THESE PARAMETERS
-room_num = 16
+room_num = 30
 
 # name = "Gloria Lin"
-description = "Hello everyone! I'm Jessica Pan, a 2024 in Computer Science and Molecular Biology (6-7) with a minor in 4b (Art and Design). I'm originally from Chicago, but I'm currently living in McCormick 3E and am excited to meet everyone! I'm also a part of ESP (the educational studies program, which runs Spark, Splash, and other events you might have heard of!), Lean on Me, and a couple of other clubs. I look forward to meeting you all, in whatever form that takes :D "
-headshot = False
+description = "Hi, I'm Jocelyn Shen, and I'm a junior majoring in course 6-3 and minoring in 14. This was my room in McCormick 7W last year, where I would enjoy the sunset with friends and drink tea (friends not depicted because...social distancing?). On campus, I was a part of SWE (Society of Women Engineers) exec board, and I UROPed in the Media Lab's Personal Robotics group, which is where I'll be doing graduate school next year! Aside from that, in my free time I like to <a href=\"http://jocelynshen.com/#artwork\" target=\"js_\">write and draw</a>! Looking forward to meeting everyone soon :) "
+headshot = True
 # Username Only for socials
-instagram = ""
-facebook = ""
+instagram = "jocie_shen"
+facebook = "jocelyn.shen.3"
 ############################
 
 filename = './bios/room' + str(room_num) + '.html'
